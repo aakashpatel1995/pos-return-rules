@@ -14,8 +14,9 @@ if (
     delete process.env.HOST;
 }
 
-const host = new URL(process.env.SHOPIFY_APP_URL || "http://localhost")
-    .hostname;
+const rawAppUrl = process.env.SHOPIFY_APP_URL || "http://localhost";
+const appUrl = rawAppUrl.startsWith("http") ? rawAppUrl : `https://${rawAppUrl}`;
+const host = new URL(appUrl).hostname;
 // HMR doesn't work when test with a real Shopify domain and the tunnel URL is different from the request URL.
 const hmrConfig =
     host === "localhost"
