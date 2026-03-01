@@ -1,0 +1,34 @@
+[[extensions]]
+name = "POS Return Rules"
+handle = "pos-return-rules-ui"
+uid = "cca52920-fe21-a1ed-1043-c9e9010248d0074dba5a"
+type = "ui_extension"
+api_version = "2025-04"
+
+  [[extensions.targeting]]
+  module = "./src/ReturnRulesModal.jsx"
+  target = "pos.home.tile.render"
+
+  [[extensions.targeting]]
+  module = "./src/ReturnRulesModal.jsx"
+  target = "pos.product-details.action.render"
+
+[extensions.settings]
+
+  [[extensions.settings.fields]]
+  key = "return_window_days"
+  type = "number_integer"
+  name = "Return Window (Days)"
+  description = "Number of days a product is eligible for a full refund."
+
+  [[extensions.settings.fields]]
+  key = "bnpl_providers"
+  type = "single_line_text_field"
+  name = "BNPL Payment Methods"
+  description = "Comma-separated list of Buy Now Pay Later payment methods (e.g. Klarna,Afterpay,Affirm)"
+
+  [[extensions.settings.fields]]
+  key = "warehouse_return_tags"
+  type = "single_line_text_field"
+  name = "Warehouse-Only Return Tags"
+  description = "Comma-separated product tags that must be shipped back to warehouse (e.g. web-only,exclusive)"

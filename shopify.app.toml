@@ -1,0 +1,25 @@
+name = "pos-return-rules"
+client_id = "c5e3610a2671ca46fffb567b7a278b9d"
+application_url = "https://placeholder.ngrok.io"
+embedded = true
+
+[access_scopes]
+scopes = "read_orders,write_orders,read_products,read_customers,read_draft_orders,write_draft_orders"
+
+[auth]
+redirect_urls = [
+  "https://placeholder.ngrok.io/auth/callback",
+  "https://placeholder.ngrok.io/auth/shopify/callback",
+  "https://placeholder.ngrok.io/api/auth/callback"
+]
+
+[webhooks]
+api_version = "2025-04"
+
+[pos]
+embedded = true
+
+[build]
+automatically_update_urls_on_dev = true
+dev_store_url = "k2yt1m-0m.myshopify.com"
+
