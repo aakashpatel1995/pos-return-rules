@@ -1,6 +1,6 @@
 name = "pos-return-rules"
 client_id = "c5e3610a2671ca46fffb567b7a278b9d"
-application_url = "https://placeholder.ngrok.io"
+application_url = "https://pos-return-rules-ui-production.up.railway.app"
 embedded = true
 
 [access_scopes]
@@ -8,9 +8,9 @@ scopes = "read_orders,write_orders,read_products,read_customers,read_draft_order
 
 [auth]
 redirect_urls = [
-  "https://placeholder.ngrok.io/auth/callback",
-  "https://placeholder.ngrok.io/auth/shopify/callback",
-  "https://placeholder.ngrok.io/api/auth/callback"
+  "https://pos-return-rules-ui-production.up.railway.app/auth/callback",
+  "https://pos-return-rules-ui-production.up.railway.app/auth/shopify/callback",
+  "https://pos-return-rules-ui-production.up.railway.app/api/auth/callback"
 ]
 
 [webhooks]
