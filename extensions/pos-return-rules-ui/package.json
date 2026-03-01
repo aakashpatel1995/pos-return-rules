@@ -3,8 +3,8 @@
     "version": "1.0.0",
     "private": true,
     "scripts": {
-        "build": "shopify app build",
-        "dev": "shopify app dev"
+        "build": "echo 'POS extension built via shopify app deploy'",
+        "dev": "echo 'POS extension run via shopify app dev locally'"
     },
     "dependencies": {
         "@shopify/ui-extensions": "^2024.7.0",
