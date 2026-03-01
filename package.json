@@ -18,11 +18,8 @@
   },
   "type": "module",
   "engines": {
-    "node": ">=18.20"
+    "node": ">=20.10"
   },
-  "workspaces": [
-    "extensions/*"
-  ],
   "dependencies": {
     "@prisma/client": "^5.20.0",
     "@remix-run/node": "^2.12.1",
